@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { PropsWithChildren, createContext, use, useTransition } from "react";
 
-export const DELAY = 500;
+export const DELAY = 10;
 
 const sleep = (ms: number) =>
   new Promise<void>((resolve) => setTimeout(() => resolve(), ms));
