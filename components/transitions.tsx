@@ -10,7 +10,7 @@ import {
   useTransition,
 } from "react";
 
-export const DELAY = 1000;
+export const DELAY = 200;
 
 const sleep = (ms: number) =>
   new Promise<void>((resolve) => setTimeout(() => resolve(), ms));
