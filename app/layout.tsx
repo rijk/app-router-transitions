@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/nav";
-import Transitions from "@/components/page-transitions/context";
-import Animate from "@/components/page-transitions/animate";
+import Transitions, { Animate } from "@/components/transitions";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} bg-slate-400 flex flex-col h-full`}>
-        <Transitions>
+      <body className={`${inter.className} bg-slate-400 h-full`}>
+        <Transitions className="h-full flex flex-col ">
           <Nav />
-          <Animate>{children}</Animate>
+          <Animate className="flex-1">{children}</Animate>
         </Transitions>
         <a
           className="absolute bottom-10 right-10 bg-white px-4 py-2 shadow-sm transition-all duration-500 rounded-lg hover:shadow-lg flex items-center gap-2"

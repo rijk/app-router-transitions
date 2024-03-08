@@ -1,4 +1,4 @@
-import Link from "./link";
+import Link from "next/link";
 
 export default function Nav() {
   return (
